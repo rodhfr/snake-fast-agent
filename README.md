@@ -2,6 +2,10 @@
 
 Automatizando o jogo Snake com alguns modelos de IA.
 
+## Authors
+
+Rodolfo Franca, Vinicius Mangueira, Irlan Miguel, Kerlon
+
 ## snake.py
 
 Implementa o jogo Snake e a API de RL.
