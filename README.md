@@ -76,6 +76,7 @@ do episódio é responsabilidade de quem implementar os agentes ou módulos de a
 ## agent.py
 
 Contém o esqueleto de um agente de Reinforcement Learning.
+Aqui ta um exemplo como pode usar esse snake_game.py em um agente.
 
 ## Dependências
 
@@ -86,3 +87,67 @@ pip install pygame
 ## Objetivo
 
 Usar o jogo Snake como ambiente para desenvolver e testar agentes de IA com Reinforcement Learning.
+
+## 🛠️ TODO — Estado Atual do Projeto
+
+### ✅ Concluído — Pessoa 1 (Ambiente / Jogo)
+
+- [x] Implementação completa do jogo Snake
+- [x] Grid, movimento da cobra e crescimento
+- [x] Geração aleatória de comida
+- [x] Detecção de colisão (parede e corpo)
+- [x] Implementação de `reset()`
+- [x] Implementação de `step(action)`
+- [x] Ambiente funcional e independente de IA
+- [x] Renderização com Pygame
+- [x] Controle humano (teclado)
+- [x] Controlador aleatório para testes
+- [x] Ambiente importável e utilizável por agentes externos
+
+---
+
+### 🚧 A Fazer — Pessoa 2 (Estados, Recompensas e API de RL)
+
+#### API do Ambiente (Responsabilidade de RL)
+
+- [ ] Atualizar a assinatura de `step(action)` para o padrão Gym:
+  - retornar `terminated` (fim por falha/sucesso)
+  - retornar `truncated` (fim por limite externo, ex: tempo)
+  - retornar o dicionário `info`
+- [ ] Definir claramente o que caracteriza:
+  - término natural do episódio
+  - truncamento do episódio
+- [ ] Manter compatibilidade com o ambiente já existente
+
+#### Estados
+
+- [ ] Definir a representação de estado observável pelo agente
+- [ ] Implementar função de extração de estado a partir do jogo
+- [ ] Validar consistência dos estados em diferentes situações
+
+#### Recompensas
+
+- [ ] Definir política final de recompensas
+- [ ] Integrar recompensas ao loop de interação agente–ambiente
+
+---
+
+### 🚧 A Fazer — Próximas Etapas
+
+#### Agente (Pessoa 4)
+
+- [ ] Implementar política de decisão
+- [ ] Implementar aprendizado
+- [ ] Estratégia de exploração (epsilon-greedy)
+
+#### Modelo (Pessoa 3)
+
+- [ ] Implementar modelo de aprendizado
+- [ ] Implementar replay memory
+- [ ] Implementar rotina de treino
+
+#### Visualização (Pessoa 5)
+
+- [ ] Melhorar interface visual
+- [ ] Visualizar métricas de treinamento
+- [ ] Preparar modo demo
